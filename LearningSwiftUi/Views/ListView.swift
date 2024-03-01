@@ -18,7 +18,7 @@ private let programmers = [Programmer(id: 1, name: "Peter Parker",languanges:   
                            Programmer(id: 4, name: "Lluis Llach",
                                       languanges: "Kotlin, Java",
                                       avatar:Image(systemName: "person.fill")),
-                           Programmer(id: 5, name: "Obama Care",
+                           Programmer(id: 5, name: "Christoph Lee",
                                       languanges: "Kotlin, Python",
                                       avatar:Image(systemName: "person.fill"))]
 
@@ -32,7 +32,7 @@ struct ListView: View {
                 .foregroundColor(Color.blue)
             List (programmers, id: \.id) { programmer in
                 RowView(programmer: programmer)
-            }
+            }.listStyle(PlainListStyle())
         }
     }
 }
