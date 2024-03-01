@@ -30,6 +30,9 @@ struct RowView: View {
                     .frame(width: 200, alignment: .leading)
             }
             Spacer()
+            if (programmer.isFavorite) {
+                Image(systemName: "star.fill").foregroundColor(.yellow)
+            }
         }
     }
 }
@@ -37,6 +40,7 @@ struct RowView: View {
 #Preview {
     RowView(programmer: Programmer(id: 1, name: "Peter Parker",
                                    languanges: "Kotlin, Swift",
-                                   avatar:Image(systemName: "person.fill"))
+                                   avatar:Image(systemName: "person.fill"),
+                                   isFavorite: true)
     )
 }
