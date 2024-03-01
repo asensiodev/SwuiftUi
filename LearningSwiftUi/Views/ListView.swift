@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-private let programmers = [Programmer(id: 1, name: "Peter Parker",languanges:                                         "Kotlin, Swift",
+private let programmers = [Programmer(id: 1, name: "Peter Parker",
+                                      languanges: "Kotlin, Swift",
                                       avatar:Image(systemName: "person.fill")),
                            Programmer(id: 2, name: "Robbie Lawler",
                                       languanges: "Kotlin, Dart",
