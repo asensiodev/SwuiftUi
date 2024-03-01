@@ -30,9 +30,12 @@ struct RowView: View {
                     .frame(width: 200, alignment: .leading)
             }
             Spacer()
-            if (programmer.isFavorite) {
-                Image(systemName: "star.fill").foregroundColor(.yellow)
-            }
+//            if (programmer.isFavorite) {
+//                Image(systemName: "star.fill").foregroundColor(.yellow)
+//            }
+            // Fix to keep avatar in same position for favorite and no favorite item
+            Image(systemName: "star.fill").foregroundColor(.blue)
+                .opacity(programmer.isFavorite ? 1 : 0)
         }
     }
 }
