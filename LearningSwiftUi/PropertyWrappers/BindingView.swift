@@ -11,6 +11,7 @@ struct BindingView: View {
     
     @Binding var value: Int
     @ObservedObject var user: UserData
+    @State private var selection: Int?
     
     var body: some View {
         VStack {
@@ -21,6 +22,15 @@ struct BindingView: View {
             Button("Update data") {
                 user.name = "Viriato"
                 user.age = 45
+            }.padding()
+            NavigationLink(
+                destination: EnvironmentView(),
+                tag: 1,
+                selection: $selection
+            ) {
+                Button("Ir a Environment View") {
+                    selection = 1
+                }
             }
         }
     }

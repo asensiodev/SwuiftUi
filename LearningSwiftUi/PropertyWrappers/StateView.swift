@@ -37,16 +37,17 @@ struct StateView: View {
                 NavigationLink(
                     destination: BindingView(value: $value, user: user),
                     tag: 1,
-                    selection: $selection) {
-                        Button("Ir a Binding View") {
-                            selection = 1
-                        }
+                    selection: $selection
+                ) {
+                    Button("Ir a Binding View") {
+                        selection = 1
                     }
+                }
             }
         }.navigationTitle("State View")
     }
 }
 
 #Preview {
-    StateView()
+    StateView().environmentObject(UserData())
 }
